@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../App.css'
 import myimage from './image/me1.png'
 
 const Home = () => {
+  useEffect(()=>{
+    iimg=myimage
+  },[])
   return (
     <div id='Home'>
     <div className='home-written'>
@@ -13,7 +16,7 @@ const Home = () => {
     </div>
     <div className='home-img'>
        <div className='home-create'>
-       <img src={myimage} alt='profile Img'/>
+       <img src={iimg} alt='profile Img'/>
         <div className='home-blend'></div>
         <div className='home-blend'></div>
         <div className='home-blend'></div>
